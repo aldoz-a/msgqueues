@@ -12,7 +12,7 @@ POSIX IPC: three simple sample programs for using Message Queues.
 
 2. writer.c - the writer child process that writes to the reader child process.
 
-3. reader.c - the reader child process that reads from the other writer child process.
+3. reader.c - the reader child process that reads from the writer child process.
 
 Includes a mini-benchmark for calculating performance in Linux environment.
 
