@@ -13,10 +13,8 @@ int main(int argc, char* argv[])
 {
     // set attributi della message queue
     struct mq_attr ma;
-    ma.mq_flags   = 0;              // flags: 0 o O_NONBLOCK
     ma.mq_maxmsg  = 10;             // numero massimo di messaggi permessi nella coda
     ma.mq_msgsize = sizeof(Data);   // massimo size di un messaggio (in byte)
-    ma.mq_curmsgs = 0;              // numero di messaggi attualmente nella coda
 
     // creo la message queue
     if (mq_open(MQUEUE_PATH, O_RDWR | O_CREAT, 0700, &ma) == -1) {
